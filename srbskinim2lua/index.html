@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>SkinIm2Lua</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="index.css">
+    </head>
+
+    <body>
+        <div id="luacontain">
+            <textarea id="lua" rows=17 cols=40 readonly></textarea>
+        </div>
+        <label for="palname">Palette name: </label><input id="palname" value="Cool Color" oninput="updateLua()"><br>
+        <label for="invcolor">Inverse color: </label><input id="invcolor" list="skincolors" value="Sky" oninput="updateLua()"><br>
+        <datalist id="skincolors">
+            <option value="Aether" />
+            <option value="Apple" />
+            <option value="Apricot" />
+            <option value="Aqua" />
+            <option value="Azure" />
+            <option value="Beige" />
+            <option value="Black" />
+            <option value="Blue" />
+            <option value="Bluebell" />
+            <option value="Bone" />
+            <option value="Bronze" />
+            <option value="Brown" />
+            <option value="Bubblegum" />
+            <option value="Carbon" />
+            <option value="Cerulean" />
+            <option value="Cloudy" />
+            <option value="Cobalt" />
+            <option value="Copper" />
+            <option value="Cornflower" />
+            <option value="Crimson" />
+            <option value="Cyan" />
+            <option value="Dusk" />
+            <option value="Emerald" />
+            <option value="Flame" />
+            <option value="Forest" />
+            <option value="Gold" />
+            <option value="Green" />
+            <option value="Grey" />
+            <option value="Icy" />
+            <option value="Jet" />
+            <option value="Ketchup" />
+            <option value="Lavender" />
+            <option value="Lilac" />
+            <option value="Lime" />
+            <option value="Magenta" />
+            <option value="Mint" />
+            <option value="Moss" />
+            <option value="Neon" />
+            <option value="Olive" />
+            <option value="Orange" />
+            <option value="Pastel" />
+            <option value="Peachy" />
+            <option value="Peridot" />
+            <option value="Pink" />
+            <option value="Plum" />
+            <option value="Purple" />
+            <option value="Quail" />
+            <option value="Raspberry" />
+            <option value="Red" />
+            <option value="Rosy" />
+            <option value="Ruby" />
+            <option value="Rust" />
+            <option value="Salmon" />
+            <option value="Sandy" />
+            <option value="Sapphire" />
+            <option value="Seafoam" />
+            <option value="Silver" />
+            <option value="Sky" />
+            <option value="Slate" />
+            <option value="Sunset" />
+            <option value="Tan" />
+            <option value="Teal" />
+            <option value="Vapor" />
+            <option value="Violet" />
+            <option value="Wave" />
+            <option value="White" />
+            <option value="Yellow" />
+            <option value="Yogurt" />
+        </datalist>
+        <label for="invshade">Inverse shade (for goal sign): </label><input id="invshade" type="number" min="0" max="15" value=0 step=1 oninput="validateShadeInput(this);updateLua()"><br>
+        <label for="chatcolor">Chat color: </label><select id="chatcolor" onchange="updateLua()">
+            <option value="RED">Red</option>
+            <option value="ORANGE">Orange</option>
+            <option value="PERIDOT">Peridot</option>
+            <option value="YELLOW">Yellow</option>
+            <option value="GREEN">Green</option>
+            <option value="SKY">Sky</option>
+            <option value="AQUA">Aqua</option>
+            <option value="BLUE" selected>Blue</option>
+            <option value="PURPLE">Purple</option>
+            <option value="MAGENTA">Magenta</option>
+            <option value="ROSY">Rosy</option>
+            
+            <option value="GRAY">Gray</option>
+            <option value="AZURE">Azure</option>
+            <option value="BROWN">Brown</option>
+            <option value="INVERT">Inverted</option>
+        </select>        
+        <p>paste it</p>
+        <canvas style="border:1px solid grey;" id="pastecanv" width="291" height="209"></canvas>
+        <br>
+        <script src="index.js"></script>
+    </body>
+</html>
