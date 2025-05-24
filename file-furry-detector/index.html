@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Furry File Detector</title>
+    <meta name="title" content="Furry File Detector" />
+    <meta name="description" content="Does your file have furries hiding in it?" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://file-furry-detector.glitch.me" />
+    <meta property="og:title" content="Furry File Detector" />
+    <meta property="og:description" content="Does your file have furries hiding in it?" />
+    <meta property="og:image" content="banner.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://file-furry-detector.glitch.me" />
+    <meta property="twitter:title" content="Furry File Detector" />
+    <meta property="twitter:description" content="Does your file have furries hiding in it?" />
+    <meta property="twitter:image" content="banner.png" />
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="favicon.png" />
+
+    <!--
+      This is the page head - it contains info the browser uses
+      Like the title, which appears on the browser tab but not inside the page
+      Further down you'll see the content that displays in the page
+    -->
+    <title>Furry Finder</title>
+
+    <!-- The website stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- The website JavaScript file -->
+  </head>
+  <body>
+    <input oninput="go()" type="file" id="file" name="size">
+
+    <br>
+    <br>
+    <div id="results">
+      Choose a file...
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+html {
+  background-color: #232424;
+  color: #dddcda;
+}
+
+* {
+  font-family: Furore, sans-serif;
+}
+
+@font-face {
+  font-family: Furore;
+  src: url("Furore.otf")
+}
+
+b {
+  font-size: .8em;
+}
+
+a {
+  text-decoration: underline;
+  color: #dddcfb;
+}
+
+#canv {
+/*   max-width: calc(100vw - 20px); */
+  height: 226px;
+/*   max-height: 750px; */
+  border: 1px solid cyan;
+  touch-action: none;
+}
+
+#cont {
+  width: 727px;
+  position: relative;
+}
+
+#zombie, #escape, #varwidthcont {
+  font-size: 14px;
+}
+
+#zombie {
+  position: absolute;
+  left: 43px;
+  top: 8px;
+  width: 150px;
+}
+
+#escape {
+  position: absolute;
+  right: 43px;
+  bottom: 26px;
+  text-align: right;
+  width: 150px;
+}
+
+#varwidthcont {
+  position: absolute;
+  left: 5px;
+  bottom: 9px;
+  display: flex;
+  user-select: none;
+}

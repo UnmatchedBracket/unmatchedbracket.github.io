@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>cardmaker</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div id="canvcontainer">
+        <canvas style="border:1px solid grey;" id="preview" width="960" height="540">
+
+        </canvas>
+        <div id="name">Your Name</div>
+    </div>
+    <br>
+    <form onsubmit="return false;">
+        <!-- the color pickers: two borders, bg, text -->
+        <input type="color" id="border1" value="#457bff" oninput="updateOut()">
+        <input type="color" id="border2" value="#489fff" oninput="updateOut()">
+        <input type="color" id="bg" value="#67c4ff" oninput="updateOut()">
+        <br>
+        <input type="text" id="nameInp" value="Your Name" oninput="updateName()">
+        <br>
+        <input type="color" id="textinner" value="#3e28ff" oninput="updateOut();updateName()">
+        <input type="color" id="textouter" value="#ffff05" oninput="updateOut();updateName()">
+
+        <br><br>
+        <textarea readonly rows=5 cols=20 id="out">color codes appear here...</textarea>
+    </form>
+    <script src="script.js"></script>
+</body>
+
+</html>

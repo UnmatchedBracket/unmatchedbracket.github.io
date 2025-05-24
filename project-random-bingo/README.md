@@ -1,0 +1,1 @@
+a bingo board for [project random](https://0xbeef.co.uk/random), intended for youtube/yt shorts

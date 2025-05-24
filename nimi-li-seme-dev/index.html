@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <meta property="og:title" content="nimi li seme">
+    <meta property="og:description" content="a simple quiz website for toki pona">
+    <meta property="og:image" content="https://cdn.glitch.global/6e43dd9a-f79c-41ae-bf09-6a422ffe2a43/nimi-li-seme.png?v=1716247291471">
+    <meta property="og:url" content="https://nimi-li-seme.glitch.me">
+    
+    <title>nimi li seme</title>
+    
+    <link rel="icon" href="https://cdn.glitch.global/6e43dd9a-f79c-41ae-bf09-6a422ffe2a43/nimi-li-seme.png?v=1716247291471" />
+
+    <link rel="stylesheet" href="style.css" />
+    
+    <style id="unloadedFont">
+      .toki {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <div id="optionsbutton" class="toki" onclick="openOptions()">
+        ante nasin
+      </div>
+      <div id="question">
+        
+      </div>
+      <div id="answers">
+        
+      </div>
+      <div id="bottom">
+        <div id="afterdef" style="visibility: hidden" onclick="afterdefClick()">
+          <span id="afterdefcontent"></span>
+          <div id="afterpopup">
+            wowee
+          </div>
+        </div>
+        <button class="toki" onclick="nextButtonClick()" id="next">
+          seme
+        </button>
+      </div>
+      <div id="options" style="display: none">
+        <div class="toki" onclick="closeOptions()" id="opt-close">
+          ala
+        </div>
+        <div class="toki" id="opt-title">
+          nimi li seme
+          <div class="toki" id="opt-subtitle">tan(poki sitelen pi tu ala)</div>
+        </div>
+        
+        <div id="opt-meme">
+          <img src="https://cdn.glitch.global/8bf48303-3f2b-43b2-bbd1-1ef0f5957ae3/no-settings.png?v=1716330227127" >
+        </div>
+        
+        <div id="opt-wordset-title">
+          <span class="toki">kulupu nimi</span><br>
+          word set
+        </div>
+        <input id="opt-wordset" type="range" min="0" max="2" step="1" value="0" oninput="options_updateWordset(this)">
+        <div id="opt-wordset-caption">
+          soup
+        </div>
+        
+        <div id="opt-autoa-title">
+          <span class="toki">tenpo tawa</span><br>
+          auto advance
+        </div>
+        <input id="opt-autoa-dummy" type="checkbox" oninput="options_updateAutoadvance(this)" style="display: none">
+        <label id="opt-autoa" for="opt-autoa-dummy" class="toki">
+          ala
+        </label>
+
+        
+        <div id="opt-cred">
+          <b style="font-size: 1.2em">Credits:</b><br>
+          Made by <a href="https://linktr.ee/unmatchedbracket">Unmatched Bracket</a><br>
+          Data from <a href="https://linku.la">linku.la</a><br>
+          Color scheme is <a href="https://github.com/catppuccin/catppuccin">Catpuccin Mocha</a><br>
+          Fonts:<br>
+          <a href="https://lipamanka.gay/linjamanka">linja lipamanka</a> for common sitelen pona<br>
+          <a href="https://www.kreativekorp.com/software/fonts/fairfaxponahd/">Fairfax Pona HD</a> for rarer sitelen pona<br>
+          <a href="https://github.com/andrew-paglinawan/QuicksandFamily">Quicksand</a> for plain text<br>
+          
+        </div>
+      </div>
+    </div>
+
+    <div style="width: 0;height: 0;position: fixed;left: -999px;top: -999px;">
+      <!-- for making sure the alt toki pona font loads -->
+      <span class="tokialt">toki</span>
+    </div>
+    <script src="data.js" defer></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="font.css" defer />
+  </body>
+</html>

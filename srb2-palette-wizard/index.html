@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Palette Wizard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <p>Paste a 16x16 image representing your palette.</p>
+    <div id="defpal">
+      <span>Default palette: </span> <img src="https://cdn.glitch.global/2cd3ad4a-ed5f-4ffa-adbf-b2b90860363a/default.png?v=1719431664383" width="32" height="32">
+    </div>
+    <canvas style="border:1px solid grey;" id="pastecanv" width="48" height="32"></canvas>
+    <br>
+    <div id="status">
+    &nbsp;
+    </div>
+    <br>
+    <div id="export" class="button disabled" onclick="exportPal()">
+      Export .pal  
+    </div>
+    <div id="me">
+      Site made by Unmatched Bracket
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,343 @@
+/* THEMES COMPAT */
+
+:root {
+    --gm_primary_text: #000000;
+    --gm_secondary_text: #505050;
+    --gm_window_color: #009688;
+    --gm_window_text: #ffffff;
+    --gm_primary_background: #e2e2e2;
+    --gm_behind_lobby_background: #1a2733;
+    --gm_table_color: #c1cdd2;
+    --gm_table_alt_color: #d2dbde;
+}
+
+/* GAME MODE EDITOR */
+
+#gmeditor {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--gm_behind_lobby_background);
+}
+
+#gmeditorwindow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 90%;
+    box-sizing: border-box;
+    margin: 0;
+    padding-top: 34px;
+    background-color: var(--gm_primary_background);
+    border-radius: 8px 8px 4px 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#gmeditor_helptext {
+    font-family: 'futurept_b1';
+    font-size: 15px;
+    line-height: 25px;
+    flex-grow: 1;
+    text-align: center;
+}
+
+#gmeditor_buttoncontainer {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    align-content: stretch;
+}
+
+#gmeditor_leftbuttons {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-start;
+    margin: 5px;
+}
+
+#gmeditor_rightbuttons {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+    margin: 5px;
+}
+
+.gmeditor_iconbutton {
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 28px;
+    height: 24px;
+    display: inline-block;
+    margin: 0 2px;
+}
+
+#gmeditor_newbutton {
+    background-image: url(images/gmenew.png);
+}
+
+#gmeditor_importbutton {
+    background-image: url(images/gmeimport.png);
+}
+
+#gmeditor_exportbutton {
+    background-image: url(images/gmeexport.png);
+}
+
+#gmeditor_backupsbutton {
+    background-image: url(images/gmebackups.png);
+}
+
+#gmeditor_settingsbutton {
+    background-image: url(images/gmesettings.png);
+}
+
+#gmeditor_savebutton {
+    background-image: url(images/gmesave.png);
+}
+
+#gmeditor_closebutton {
+    background-image: url(images/gmeclose.png);
+}
+
+#gmblocklyarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    flex-grow: 1;
+}
+
+#gmblocklydiv {
+    position: absolute;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.blockly-ws-search button {
+    width: 20px;
+}
+
+/* LOBBY MODS */
+
+.modebuttoncontainer {
+    display: flex;
+    position: absolute;
+    right: 15px;
+    bottom: 55px;
+    width: 116px;
+}
+
+#newbonklobby_modebutton {
+    width: calc(50% - 62px);
+    right: 55px;
+}
+
+#newbonklobby_modebutton.gm_withbonkhost {
+    width: calc(100% - 42px);
+    left: 0;
+    bottom: -30px;
+    position: absolute !important;
+}
+
+#gmeditor_openbutton {
+    position: absolute;
+    right: 15px;
+    bottom: 55px;
+    height: 30px;
+    width: 30px;
+    margin-left: 5px;
+    background-image: url(images/gmmlogo.png);
+    background-size: 95%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+}
+
+#gm_basemodetext {
+    display: inline-block;
+    color: var(--gm_secondary_text);
+    font-size: 14px;
+    pointer-events: none;
+    margin-left: 5px;
+}
+
+/* DIALOG CLASSES */
+
+.gm_behindblocker {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    outline: 3000px solid rgba(0,0,0,0.30);
+    width: 1px;
+    height: 1px;
+}
+
+.gm_dialogwindowcontainer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    visibility: hidden;
+    z-index: 999999;
+}
+
+.gm_dialogwindow {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: fit-content;
+    max-width: 400px;
+    height: fit-content;
+    background-color: var(--gm_primary_background);
+    margin: auto;
+    font-family: "futurept_b1";
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gm_dialogtopbar {
+    background-color: var(--gm_window_color);
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    color: var(--gm_window_text);
+    font-family: "futurept_b1";
+    text-align: center;
+    font-size: 20px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.gm_dialogtext {
+    color: var(--gm_primary_text);
+    text-align: center;
+    left: 0;
+    right: 0;
+    top: 53px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.gm_dialogbuttoncontainer {
+    display: flex;
+    align-content: stretch;
+    width: 90%;
+    justify-content: space-around;
+}
+
+.gm_dialogbuttoncontainer div {
+    padding: 5px;
+    margin: 10px;
+    max-width: 150px;
+    min-width: 100px;
+    flex-grow: 1;
+}
+
+.gm_dialogoptions {
+    color: var(--gm_primary_text);
+    text-align: left;
+    left: 0;
+    right: 0;
+    top: 53px;
+    width: fit-content;
+    margin: 20px 20px 10px 20px;
+}
+
+.gm_dialogtextfield {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 15px;
+    background: #fdfdfd;
+    border: 1px solid #bdbdbd;
+    color: #4e4e4e;
+    width: 100%;
+    min-width: 300px;
+    height: 30px;
+    padding-right: 4px;
+    margin-top: 3px;
+    resize: vertical;
+}
+
+/* WORKSPACE SEARCH COLOUR FIX */
+
+path.blocklyPath.blockly-ws-search-highlight {
+    fill: black;
+    fill-opacity: 1;
+}
+
+/* VAR INSPECTOR */
+
+#gm_varinspector {
+    display: none;
+    position: absolute;
+    z-index: 9999;
+    width: 500px;
+    height: 500px;
+    resize: both;    
+    overflow: auto;
+
+    background-color: var(--gm_primary_background);
+    padding-top: 34px;
+    border-radius: 7px;
+    box-shadow: 1px 1px 5px -2px rgb(0 0 0 / 63%);
+}
+
+#gm_varinspector .windowTopBar {
+    cursor: grab;
+}
+
+#gm_varinspector .windowTopBar:active {
+    cursor: grabbing;
+}
+
+#gmvi_content {
+    flex-direction: column;
+    font-family: 'futurept_b1';
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.gmvi_tab_content {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    color: var(--gm_primary_text);
+    font-family: "futurept_b1";
+}
+
+.gmvi_var {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-content: stretch;
+
+    width: 100%;
+    padding: 4px;
+    box-sizing: border-box;
+    background-color: var(--gm_table_color);
+}
+
+.gmvi_var:nth-child(odd) {
+    background-color: var(--gm_table_alt_color);
+}
+
+.gmvi_var div {
+    flex-basis: 0;
+    flex-grow: 1;
+}

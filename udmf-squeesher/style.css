@@ -1,0 +1,26 @@
+html {
+  font-family: sans-serif;
+  background-color: #232424;
+  color: #dddcda;
+}
+
+#results {
+  font-family: monospace;
+  background-color: #00000055;
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+
+b {
+  font-size: .8em;
+}
+
+a {
+  text-decoration: underline;
+  color: #dddcfb;
+}
+
+#copier {
+  position: fixed;
+  left: -9999px;
+}

@@ -1,0 +1,1 @@
+a tool for [SRB2](https://www.srb2.org) designed to take skin design images from the [switchkaze tool](https://cottoncandy2c.github.io/switchkaze.github.io/tools/colors.html) and turn them into lua scripts usable ingame

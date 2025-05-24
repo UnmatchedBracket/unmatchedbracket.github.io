@@ -1,0 +1,82 @@
+@font-face {
+  font-family: 'Quicksand';
+  src: url('https://cdn.glitch.global/84e18769-cb09-47c1-86a2-7253cf25b3dd/Quicksand-Regular.ttf?v=1715529334872') format('ttf');
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background-color: #11111b;
+  font-family: Quicksand, sans-serif;
+  color: #cdd6f4;
+}
+
+* {
+  user-select: none;
+}
+
+#main {
+  text-align: center;
+  background-color: #45475a;
+  padding: 0px;
+  margin: 0px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  --size: calc( min( 19vw, 17vh ) );
+  --margin: calc( var(--size) / 8);
+  width: calc( var(--size) * 5 );
+  height: calc( var(--size) * 5.5 );
+  line-height: 0px;
+  font-size: calc( var(--size) / 8 );
+}
+
+.cell {
+  text-align: center;
+  background-color: #1e1e2e;
+  transition: background-color .2s;
+  padding: calc( var(--size) / 10 );
+  margin: calc( var(--margin) / 2 );
+  box-sizing: border-box;
+  border-radius: 5px;
+  width: calc( var(--size) - var(--margin) );
+  height: calc( var(--size) - var(--margin) );
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: normal;
+  vertical-align: top;
+}
+
+.cell.got {
+  background-color: #9399b2;/*#89dceb;*/
+  color: #181825;
+}
+
+#main.success .cell.got, .cell.success {
+  background-color: #a6e3a1;
+  color: #181825;
+}
+
+.button {
+  background-color: #313244;
+  margin: calc( var(--margin) / 2 );
+  box-sizing: border-box;
+  padding: calc( var(--size) / 10 );
+  border-radius: 5px;
+  border: none;
+  width: calc( var(--size) - var(--margin) );
+  height: calc( var(--size) / 2 - var(--margin) );
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: normal;
+  vertical-align: top;
+  color: inherit;
+}

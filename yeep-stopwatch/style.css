@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #11111b;
+  height: 100vh;
+  padding: 8px;
+  font-family: sans-serif;
+  color: #cdd6f4;
+  font-size: 16px;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    --min: calc( min(100vw, 100vh) );
+}
+
+#timer {
+  font-family: SevenSegment, monospace;
+  font-size: calc( var(--min) * .25 );
+  color: red;
+}
+
+#buttonbar {
+  margin-top: calc( var(--min) * .09 );
+}
+
+#buttonbar > div {
+  font-size: calc( var(--min) * .03 );
+  border: 1px solid #cdd6f4;
+  padding: calc( var(--min) * .03 );
+  border-radius: var(--min);
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 calc( var(--min) * .02 );
+}
+
+#reset:hover {
+  filter: drop-shadow(0px 0px 2px #74c7ec) drop-shadow(0px 0px 4px #74c7ec);
+}

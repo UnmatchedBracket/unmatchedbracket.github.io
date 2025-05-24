@@ -1,0 +1,62 @@
+html, body {
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 10px;
+}
+
+* {
+  font-family: sans-serif;
+  background-color: #11111b;
+  color: #cdd6f4;
+  font-size: 18px;
+}
+
+.toki {
+  font-family: Pona, sans-serif;
+}
+
+.fade {
+  opacity: 0.5;
+}
+
+#inpbox {
+  display: flex;
+}
+
+#inp {
+  border: 1px solid #89dceb;
+  border-radius: 1em;
+  padding: 0 1ch;
+  position: relative;
+  flex-grow: 1;
+}
+
+.desc {
+  color: #89dceb;
+  font-size: .75em;
+}
+
+#repeat {
+  display: none;
+}
+
+#repeattext {
+  user-select: none;
+}
+
+#repeattext::after {
+  content: "[ala]";
+  cursor: pointer;
+  font-family: Pona, sans-serif;
+}
+
+#repeat:checked + #repeattext::after {
+  content: "[lon]";
+  cursor: pointer;
+  font-family: Pona, sans-serif;
+}
+  font-family: Pona, sans-serif;

@@ -1,0 +1,69 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: Quicksand, sans-serif;
+  background-color: #11111b;
+  color: #cdd6f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+* {
+  border-color: #cdd6f4;
+}
+
+img {
+  image-rendering: pixelated;
+}
+
+#defpal {
+    display: flex;
+    margin-bottom: 1em;
+    align-items: center;
+}
+
+#defpal span {
+  margin-right: 1ch;
+}
+
+#defpal img {
+  border: 1px solid;
+}
+
+@font-face {
+  font-family: Quicksand;
+  src: url('https://cdn.glitch.global/8bf48303-3f2b-43b2-bbd1-1ef0f5957ae3/Quicksand-VariableFont_wght.ttf?v=1716329842925') format('truetype');
+  font-display: swap;
+}
+
+#pastecanv {
+  width: 384px;
+  height: 256px;
+  image-rendering: pixelated;
+}
+
+.button {
+  border: 1px solid;
+  border-radius: 8px;
+  padding: 8px;
+  user-select: none;
+  cursor: pointer;
+}
+
+.disabled {
+  opacity: .3;
+  cursor: not-allowed;
+}
+
+#me {
+  font-size: 10px;
+  margin-top: 8px;
+  opacity: .2;
+}

@@ -1,11 +1,78 @@
-hey
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-whatchya doin here
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>bracket's stuff</title>
+
+    <link rel="stylesheet" href="/indexstyle.css" />
+
+  </head>
+  <body>
+    <script>
+      let items = [
+        "!srb2",
+        "@srb2-direct-card-maker",
+        "@srb2-palette-wizard",
+        "@srb2skinim2lua",
+        "@mb-srb2",
+        "@udmf-squeesher",
+        "@ganon-los-memes",
+
+        "!toki pona",
+        "@nimi-li-seme",
+        "@nimi-li-seme-dev",
+        "@o-alasa-e-nimi",
+        "@sitelen-tu",
+        "@kijetesantakalu-li-suli",
+
+        "!other",
+        "@bracket-mnist-ai",
+        "@laserkeyboard",
+        "@file-furry-chance",
+        "@tabbed-kb",
+        "@file-furry-detector",
+        "@project-random-bingo",
+        "?watermarkvrleaks",
+        "@gmviewer",
+        "@yeep-stopwatch",
+      ]
+
+      for (const item of items) {
+        let type = item[0]
+        let name = item.slice(1)
+        let el
+        if (item[0] == "!") {
+          el = document.createElement("h2")
+          el.innerText = name
+        } else {
+          el = document.createElement("div")
+          el.classList = "item"
+          el.appendChild((() => {
+            let link = document.createElement("a")
+            link.href = name
+            link.innerText = name
+            return link
+          })())
+          if (type != "?") {
+            el.appendChild((() => {
+              let link = document.createElement("a")
+              link.classList = "readme"
+              link.href = name + "/README.md"
+              link.innerText = "[readme]"
+
+              fetch(name + "/README.md").then(e => {
+                if (e.status >= 400) {
+                  console.warn(name + " has no readme")
+                  link.classList.add("bad")
+                }
+              })
+
+              return link
+            })())
+          }
+        }
+
+        document.body.appendChild(el)
+      }
+    </script>
+  </body>
+</html>

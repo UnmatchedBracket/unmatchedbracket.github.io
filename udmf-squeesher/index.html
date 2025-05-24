@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>UDMF squeesher</title>
+
+
+    <meta property="og:title" content="udmf squeesher">
+    <meta property="og:description" content="make yer UDMF maps a bit smoller">
+    <meta property="og:image" content="https://cdn.glitch.global/aedb5227-db85-41e0-95ca-1a74f23c35e1/squeesh.png?v=1733715669131">
+    <meta property="og:url" content="https://udmf-squeesher.glitch.me">
+    <link rel="icon" href="https://cdn.glitch.global/aedb5227-db85-41e0-95ca-1a74f23c35e1/squeesh-favico.png?v=1733715492911" />
+    
+    <!-- The website stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- The website JavaScript file -->
+  </head>
+  <body>
+    <textarea id="source" rows="8" cols="50"></textarea>
+    <button onclick="go()">
+      Squeesh
+    </button>
+
+    <br>
+    <br>
+    Reduced size by <span id="reduction">...</span>.
+    <button onclick="copy()">Copy</button>
+    <br>
+    Newline at end is required! Not having a newline will cause SRB2 to crash when reading the map.
+    <br>
+    <br>
+    <div id="results">
+      ...
+    </div>
+    <textarea id="copier"></textarea>
+    <script src="script.js"></script>
+  </body>
+</html>

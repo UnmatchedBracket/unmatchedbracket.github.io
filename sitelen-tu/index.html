@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="title" content="sitelen tu" />
+    <meta name="description" content="ni li lipu pi toki pi nimi kon" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sitelen-tu.glitch.me" />
+    <meta property="og:title" content="sitelen tu" />
+    <meta property="og:description" content="ni li lipu pi toki pi nimi kon" />
+    <meta property="og:image" content="https://cdn.glitch.global/085be086-2aac-4c46-bef6-154c42f70822/sitelen-tu-media.png?v=1715789443539" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://sitelen-tu.glitch.me" />
+    <meta property="twitter:title" content="sitelen tu" />
+    <meta property="twitter:description" content="ni li lipu pi toki pi nimi kon" />
+    <meta property="twitter:image" content="https://cdn.glitch.global/085be086-2aac-4c46-bef6-154c42f70822/sitelen-tu-media.png?v=1715789443539" />
+    
+    <title>sitelen tu: ni li lipu pi toki pi nimi kon</title>
+    
+    <link rel="icon" href="https://cdn.glitch.global/085be086-2aac-4c46-bef6-154c42f70822/sitelen-tu.png?v=1715742457561" />
+
+    <link rel="stylesheet" href="style.css" />
+    
+    <style id="unloadedFont">
+      .tokiline .toki {
+        display: none;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div id="inpbox">
+      <label for="inp" class="toki">toki-pona</label>
+      <input oninput="go()" id="inp" name="inp" value = "toki pona li musi li ike ala">
+    </div>
+    <input oninput="go()" id="repeat" name="repeat" type = "checkbox">
+    <label for="repeat" id="repeattext"><span class="toki">o toki tu e nimi</span> (describe words twice?)</label>
+    <br><br>
+    <!-- prefilled for minimal jump on load -->
+    <div id="out"><div class="tokiline"><span class="toki">toki</span><span>toki </span><span class="desc">communicate, say, speak, talk, use language, think; hello</span></div>  <div class="tokiline"><span class="toki">pona</span><span>pona </span><span class="desc">good, positive, useful; friendly, peaceful; simple</span></div>  <div class="tokiline"><span class="toki">li</span><span>li </span><span class="desc">(between any subject except mi alone or sina alone and its verb; also to introduce a new verb for the same subject)</span></div>  <div class="tokiline"><span class="toki">musi</span><span>musi </span><span class="desc">artistic, entertaining, frivolous, playful, recreation</span></div>  <span class="toki fade">li</span><span></span><div class="tokiline"><span class="toki">ike</span><span>ike </span><span class="desc">bad, negative; non-essential, irrelevant | ALT complicated, complex</span></div>  <div class="tokiline"><span class="toki">ala</span><span>ala </span><span class="desc">no, not, zero; [~ ala ~] (used to form a yes-no question); nothing</span></div></div>
+    <script src="data.js" defer></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="font.css" defer />
+  </body>
+</html>

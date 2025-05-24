@@ -1,0 +1,21 @@
+canvas {
+  border: 1px solid black;
+}
+
+#disp {
+  width: 280px;
+  height: 280px;
+  image-rendering: pixelated;
+}
+
+#out {
+  font-size: 40px;
+}
+
+#num {
+  font-weight: bold;
+}
+
+* {
+  font-family: monospace;
+}

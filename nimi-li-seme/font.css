@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Pona';
+  /*src: url('https://cdn.glitch.global/085be086-2aac-4c46-bef6-154c42f70822/FairfaxPonaHD.ttf?v=1715725636101') format('truetype');*/
+  src: url('https://cdn.glitch.global/8bf48303-3f2b-43b2-bbd1-1ef0f5957ae3/nasin-nanpa-4.0.0.otf?v=1716496448090');
+  font-display: swap;
+}
+
+/* @font-face {
+  font-family: 'PonaAlt';
+  src: url('https://cdn.glitch.global/085be086-2aac-4c46-bef6-154c42f70822/FairfaxPonaHD.ttf?v=1715725636101') format('truetype');
+  font-display: swap;
+} */
+
+@font-face {
+  font-family: Quicksand;
+  src: url('https://cdn.glitch.global/8bf48303-3f2b-43b2-bbd1-1ef0f5957ae3/Quicksand-VariableFont_wght.ttf?v=1716329842925') format('truetype');
+  font-display: swap;
+}

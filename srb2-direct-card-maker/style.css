@@ -1,0 +1,29 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+#canvcontainer {
+    position: relative;
+    height: 540px;
+}
+
+canvas {
+    border: 1px solid grey;
+    position: absolute;
+}
+
+@font-face {
+    font-family: 'sonicfont';
+    src: url('NiseSegaSonic.TTF');
+}
+
+#name {
+    position: absolute;
+    top: 270px;
+    left: 480px;
+    transform: translate(-50%, -50%);
+    font-family: 'sonicfont';
+    font-size: 70px;
+    white-space: nowrap;
+}

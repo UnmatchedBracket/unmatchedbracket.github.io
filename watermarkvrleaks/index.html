@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=550px, initial-scale=1" />
+    
+
+    <title>!watermarkVRleaks</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <input type="file" id="fpicker" accept="image/*"> or paste
+    <br>
+    <canvas id="canv"></canvas>
+    <br>
+    <label for="scale">Scale:</label>
+    <input type="range" min="-2" max="1" id="scale" step="0.01" value="0"><span id="scalenum">x1.000</span>
+    <br><br>
+    <label for="angle">Angle:</label>
+    <input type="range" min="-180" max="180" id="angle" step="0.1" value="0"><span id="anglenum">0.0</span>&deg;
+    <br><br>
+    <label for="alpha">Alpha:</label>
+    <input type="range" min="0" max="1" id="alpha" step="0.01" value="0.5"><span id="alphanum">50</span>%
+    <br><br>
+    <label for="mark">Watermark style:</label>
+    <select id="mark">
+      <option value="bracket-light">Bracket's Light</option>
+      <option value="bracket-dark">Bracket's Dark</option>
+      <option value="chill-filled">Chillflops' Shaded</option>
+      <option value="unkn-repeat">Someone's Repeating</option>
+    </select>
+
+    <br><br>
+    <button id="export">Export</button> or right click and copy image on desktop
+
+    <br>
+    <button onclick="toggleFullscreen()" style="opacity: 0.0">Fullscreen</button>
+  
+    <script>
+      function toggleFullscreen() {
+        if (!document.fullscreenElement) {
+          document.documentElement.requestFullscreen(); // Enter fullscreen
+          document.documentElement.style.zoom = window.innerWidth / 800
+        } else {
+          document.exitFullscreen(); // Exit fullscreen
+        }
+      }
+    </script>
+  </body>
+</html>
