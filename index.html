@@ -7,6 +7,42 @@
 
   </head>
   <body>
+    <h1>hello</h1>
+    <p>
+      i am
+      <b id="thebrack">
+        <span class="brack-b">{</span><span class="brack-u"><span class="brack-g">;</span><span class="brack-b">]</span></span>
+      </b>
+      <b class="mono">
+        unmatched bracket 
+      </b>
+    </p>
+    <p>
+      i do some funny programming stuff<br>
+      some of which you can find below
+    </p>
+    <p>
+      you can also probably find me on some other websites:
+      <br>
+      <div id="social">
+        <!-- any brands who decide to be cringe enough to complain about their icons being slightly different on a personal website will be replaced with trash cans -->
+        <a href="https://bsky.app/profile/unmatchedbracket.bsky.social" id="social-bsky">
+          <img src="index-assets/bsky.svg">
+        </a>
+        <a href="https://github.com/UnmatchedBracket" id="social-gh">
+          <img src="index-assets/github.svg">
+        </a>
+        <span id="social-dc">
+          <img src="index-assets/discord.svg">
+        </span>
+        <a href="https://www.youtube.com/@unmatchedbracket" id="social-yt">
+          <img src="index-assets/youtube.svg">
+        </a>
+      </div>
+      <div id="socialtooltip"> </div>
+    </p>
+    <h1 id="srs">some random stuff</h1>
+    <h2 id="subsrs">that i had to move from glitch</h2>
     <script>
       let items = [
         "!srb2",
@@ -19,7 +55,7 @@
 
         "!toki pona",
         "@nimi-li-seme",
-        "@nimi-li-seme-dev",
+        "?nimi-li-seme-dev",
         "@o-alasa-e-nimi",
         "@sitelen-tu",
         "@kijetesantakalu-li-suli",
@@ -59,12 +95,12 @@
               link.href = name + "/README.md"
               link.innerText = "[readme]"
 
-              fetch(name + "/README.md").then(e => {
-                if (e.status >= 400) {
-                  console.warn(name + " has no readme")
-                  link.classList.add("bad")
-                }
-              })
+              // fetch(name + "/README.md").then(e => {
+              //   if (e.status >= 400) {
+              //     console.warn(name + " has no readme")
+              //     link.classList.add("bad")
+              //   }
+              // })
 
               return link
             })())

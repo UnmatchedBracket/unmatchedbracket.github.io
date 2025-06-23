@@ -5,9 +5,9 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  min-height: 100%;
   margin: 0;
-  padding: 100px;
+  padding: 50px;
   box-sizing: border-box;
 }
 
@@ -33,4 +33,91 @@ body {
 
 .bad {
   color: #f38ba8;
+}
+
+#thebrack {
+
+  filter: drop-shadow(0px 0px 1px #000000) drop-shadow(0px 0px 1px #000000) drop-shadow(0px 0px 1px #000000);
+}
+.brack-b {
+  color: #5a89e3;
+}
+.brack-g {
+  color: #5fe73e;
+}
+.brack-u {
+  text-decoration: underline;
+  text-underline-position: under;
+  text-decoration-color: #da0019;
+  text-decoration-style: wavy;
+}
+
+.mono {
+  font-family: monospace;
+}
+
+#social {
+  font-size: 0;
+  border: 1px solid #cdd6f4;
+  padding: 10px;
+  border-radius: 16px;
+  width: fit-content;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+#social img {
+  width: 32px;
+  /* height: 32px; */
+}
+
+#social > * {
+  /* filter: drop-shadow(0px 0px 2px rgba(255, 255, 255, 0.0)); */
+  transition: 0.2s;
+  outline: 1px dotted #cdd6f400;
+  outline-offset: -8px;
+}
+#social > :hover {
+  /* filter: drop-shadow(0px 0px 2px rgba(255, 255, 255, 1.0)); */
+  outline-color: #cdd6f4ff;
+  outline-offset: 2px;
+}
+
+#socialtooltip {
+  margin-top: 3px;
+  height: 2em;
+  transform-origin: top;
+  transform: scale(1.0, 0.0);
+  transition: 0.2s;
+  white-space: pre-line;
+  max-width: 100%;
+}
+
+body:has(#social :hover) #socialtooltip {
+  transform: scale(1.0, 1.0);
+}
+
+body:has(#social-bsky:hover) #socialtooltip::after {
+  content: "bluesky, the butterfly website\00000Aalso known for people talking"
+}
+body:has(#social-gh:hover) #socialtooltip::after {
+  content: "github, the octopus cat place\00000Aalso known for having code"
+}
+body:has(#social-dc:hover) #socialtooltip::after {
+  content: "what even *is* discord's mascot\00000Athere as @unmatchedbracket\00000Ano server link tho"
+}
+body:has(#social-yt:hover) #socialtooltip::after {
+  content: "yea i guess i have a youtube\00000Atbh don't do much there"
+}
+
+#srs {
+  margin-bottom: 0;
+}
+
+#subsrs {
+  margin-top: 0;
 }
