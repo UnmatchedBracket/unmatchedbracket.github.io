@@ -19,8 +19,12 @@ html, body {
 pre {
     border: 1px solid #333340;
     padding: 3px;
-    width: 50%;
     background-color: #10101a;
+    width: fit-content;
+}
+
+wasm pre {
+    width: 50%;
 }
 
 pre.em {
