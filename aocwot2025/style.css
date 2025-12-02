@@ -1,0 +1,55 @@
+* {
+    font-family: 'Source Code Pro', monospace, sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: #0f0f23;
+    color: #cccccc;
+}
+
+@font-face {
+    font-family: 'Source Code Pro';
+    font-style: normal;
+    font-weight: 300;
+    src: url(SourceCodePro-300.woff) format('woff');
+}
+
+pre {
+    border: 1px solid #333340;
+    padding: 3px;
+    width: 50%;
+    background-color: #10101a;
+}
+
+pre.em {
+    color: #fff;
+    text-shadow: 0 0 5px #fff;
+}
+
+a {
+    color: #009900;
+}
+
+.glow {
+    text-shadow: 0 0 5px #ffffff;
+}
+
+a:hover, a:focus {
+    color: #99ff99;
+}
+
+button {
+    color: #009900;
+    font-size: inherit;
+    border: 1px solid #009900;
+    background-color: transparent;
+    cursor: pointer;
+    font-weight: inherit;
+}
+
+button:hover:not(:active) {
+    color: #99ff99;
+    border-color: #99ff99;
+}
