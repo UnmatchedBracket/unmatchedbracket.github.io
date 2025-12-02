@@ -10,7 +10,7 @@ try {
         document.body.innerHTML = ""
         document.body.appendChild(el = document.createElement("a"))
         el.innerText = "(back)"
-        el.href = ".."
+        el.href = "./"
         document.body.appendChild(el = document.createElement("h1"))
         el.innerText = "Source file: " + fileid
         document.body.appendChild(el = document.createElement("pre"))
