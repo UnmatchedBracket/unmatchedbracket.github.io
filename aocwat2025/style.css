@@ -36,7 +36,7 @@ a {
     color: #009900;
 }
 
-.glow {
+glow {
     text-shadow: 0 0 5px #ffffff;
 }
 
@@ -56,4 +56,9 @@ button {
 button:hover:not(:active) {
     color: #99ff99;
     border-color: #99ff99;
+}
+
+summary {
+    font-size: 3ch;
+    font-weight: 600;
 }

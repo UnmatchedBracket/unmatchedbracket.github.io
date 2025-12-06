@@ -23,8 +23,8 @@ window.onload = () => {
         let waturl = `wat/d${day}p${part}.wat`
         
         let el, outerel, output
-        e.appendChild(outerel = document.createElement("h2"))
-        outerel.innerHTML = `Day <span class='glow'>${day}</span>, Part <span class='glow'>${part}</span> (`
+        e.appendChild(outerel = document.createElement("h3"))
+        outerel.innerHTML = `Day <glow>${day}</glow>, Part <glow>${part}</glow> (`
         outerel.appendChild(el = document.createElement("button"))
         let currentlyRunning = false
         el.onclick = () => {
