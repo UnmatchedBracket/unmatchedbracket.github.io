@@ -5,13 +5,56 @@
 <title>AoC WAT 2025</title>
 
 <h1>My <a href="https://adventofcode.com/">Advent of Code</a> 2025 solutions, made with <a href="https://webassembly.org/">WASM</a> text format</h1>
-<wasm day="1" part="1"></wasm>
-<wasm day="1" part="2"></wasm>
-<wasm day="2" part="1"></wasm>
-<wasm day="2" part="2"></wasm>
-<wasm day="3" part="1"></wasm>
-<wasm day="3" part="2"></wasm>
-<wasm day="4" part="1"></wasm>
-<wasm day="4" part="2"></wasm>
-<wasm day="5" part="1"></wasm>
-<wasm day="5" part="2"></wasm>
+<a href="javascript:[...document.getElementsByTagName('details')].at(-1).scrollIntoView()">to bottom ↓</a>
+<br />
+<details>
+    <summary>Day <glow>1</glow>: Secret Entrance</summary>
+    This one wasn't too hard; it was the first day, after all.
+    <br />
+    Part 1 and 2 are basically the same, just where part 1 rotates e.g. left by 58 once,
+    part 2 rotates left by one 58 times.
+    <br />
+    Not a <i>great</i> algorithm, but eh
+    <wasm day="1" part="1"></wasm>
+    <wasm day="1" part="2"></wasm>
+</details>
+<details>
+    <summary>Day <glow>2</glow>: Gift Shop</summary>
+    Part 1 of this wasn't very complex; had to do some funny math to check for repeating numbers but that was basically it. 
+    <br />
+    Part 2 did throw in some more complexity, but part 1's code was adaptable to it well enough.
+    <wasm day="2" part="1"></wasm>
+    <wasm day="2" part="2"></wasm>
+</details>
+<details>
+    <summary>Day <glow>3</glow>: Lobby</summary>
+    Part 1 of this got a brute-force solution: try every possible first digit with every possible end second digit.
+    <br />
+    Part 2 forced a more clever solution - I realized I didn't have to check every combo, as a larger first digit would <i>always</i> produce a bigger joltage; so I just had to check for the first largest number in range for each digit.
+    <wasm day="3" part="1"></wasm>
+    <wasm day="3" part="2"></wasm>
+</details>
+<details>
+    <summary>Day <glow>4</glow>: Printing Department</summary>
+    This one wasn't that bad with memory set up well; with the rows spaced out from eachother with a constant offset, I can just check e.g. 257 bytes back in memory and find the cell up and left in the grid.
+    <br />
+    Part 2 was just part 1 in a loop and removing rolls when counted.
+    <wasm day="4" part="1"></wasm>
+    <wasm day="4" part="2"></wasm>
+</details>
+<details open>
+    <summary>Day <glow>5</glow>: Cafeteria</summary>
+    Part 1 wasn't too bad; scan the ranges into memory, then check each ingredient against all ranges until one works.
+    <br />
+    Part 2 was way harder, for three reasons: ranges could overlap, ingredients in two ranges should only be counted once, and going through the whole ingredient range manually would take hours even on the <i>best</i> CPUs. I did eventally come up with a solution I liked:
+    <ol>
+        <li>For each range, check if its end numbers are in any other range.</li>
+        <li>If either end <i>is</i>, combine the two ranges in question by setting one range to the minimum minimum and the maximum maximum, and the other to 0-0 (which would be ignored later).</li>
+        <li>If any range is combined, restart checks for the current range as to not accidentally miss a range that's now in reach.</li>
+        <li>Once all ranges have been checked, none will overlap. Add up the sizes of all ranges +1, and return.</li>
+    </ol>
+    <wasm day="5" part="1"></wasm>
+    <wasm day="5" part="2"></wasm>
+</details>
+
+<div><br /></div> <!-- if the br isn't in a div it doesn't do anything apparently -->
