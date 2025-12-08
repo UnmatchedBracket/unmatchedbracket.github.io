@@ -56,7 +56,7 @@
     <wasm day="5" part="1"></wasm>
     <wasm day="5" part="2"></wasm>
 </details>
-<details open>
+<details>
     <summary>Day <glow>6</glow>: Trash Compactor</summary>
     Part 1 was pretty simple - just loaded each number into memory, recorded how long the row was, and read * and + to check what operation to do
     <br />
@@ -65,6 +65,14 @@
     For detecting blank columns, I could take advantage of the fact that zero doesn't appear anywhere in the input; so if I read a column as zero, it was definitely blank. 
     <wasm day="6" part="1"></wasm>
     <wasm day="6" part="2"></wasm>
+</details>
+<details open>
+    <summary>Day <glow>7</glow>: Laboratories</summary>
+    This one ended up pretty simple; keep a target row and a source row of memory, read the line, apply the correct behaviour, and swap rows for the next line.
+    <br />
+    Part 2 also had a simple solution; instead of writing 1, write the number of rays the space currently represents. The count of lasers at the end can be adapted from the split count, just start with 1 and add the number of rays split when a splitter is hit.
+    <wasm day="7" part="1"></wasm>
+    <wasm day="7" part="2"></wasm>
 </details>
 
 <div><br /></div> <!-- if the br isn't in a div it doesn't do anything apparently -->
