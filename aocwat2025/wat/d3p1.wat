@@ -17,7 +17,6 @@
         i32.add
         i32.load8_u
     )
-
     (func $readdigit (result i32)
         (local $chr i32)
         call $read

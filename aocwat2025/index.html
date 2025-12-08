@@ -42,7 +42,7 @@
     <wasm day="4" part="1"></wasm>
     <wasm day="4" part="2"></wasm>
 </details>
-<details open>
+<details>
     <summary>Day <glow>5</glow>: Cafeteria</summary>
     Part 1 wasn't too bad; scan the ranges into memory, then check each ingredient against all ranges until one works.
     <br />
@@ -55,6 +55,16 @@
     </ol>
     <wasm day="5" part="1"></wasm>
     <wasm day="5" part="2"></wasm>
+</details>
+<details open>
+    <summary>Day <glow>6</glow>: Trash Compactor</summary>
+    Part 1 was pretty simple - just loaded each number into memory, recorded how long the row was, and read * and + to check what operation to do
+    <br />
+    The main change for part 2 was reading digits instead of numbers, and not skipping spaces. Then, I could iterate through each column, read the */+ conveniently positioned at the start of the problem, and read numbers down from the column.
+    <br />
+    For detecting blank columns, I could take advantage of the fact that zero doesn't appear anywhere in the input; so if I read a column as zero, it was definitely blank. 
+    <wasm day="6" part="1"></wasm>
+    <wasm day="6" part="2"></wasm>
 </details>
 
 <div><br /></div> <!-- if the br isn't in a div it doesn't do anything apparently -->
