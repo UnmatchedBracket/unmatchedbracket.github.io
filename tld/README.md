@@ -1,0 +1,1 @@
+takes text and tells you if it could be split into a TLD in a cool way, e.g. syn.tax, burg.er, very.wow, super.man, etc
